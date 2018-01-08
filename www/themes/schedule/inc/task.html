@@ -1,16 +1,24 @@
 <ion-view>
-	<ion-nav-title class="title text-center">Tarefa Selecionada</ion-nav-title>
+	<ion-nav-title>{{task.title}}</ion-nav-title>
 	<ion-content>
 		<div class="card">
 			<div class="item item-divider">
-				{{task}}
+			  	{{task.status}}
 			</div>
-			<div class="item item-divider">
-				Taks Description
+			<div class="item-divider" style="padding:16px;">
+				{{task.desc}}
 			</div>
-			<div class="item item-divider">
-				Taks Action
-			</div>
+			<ul class="list" ng-repeat="item in items">
+				<li class="item item-toggle">
+					{{item.end}}
+					<label class="toggle toggle-assertive">
+						<input type="checkbox" ng-model="end" ng-click="taskEnd(item,task)">
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				</li>
+			</ul>
 		</div>
 	</ion-content>
 </ion-view>
