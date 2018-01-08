@@ -1,10 +1,16 @@
 angular.module('starter')
 .config(function($stateProvider, $urlRouterProvider){
+	var theme = 'themes/schedule/'; //default theme
 	$urlRouterProvider.otherwise('/'); //default router
 
-	$stateProvider.state('view',{
+	$stateProvider.state('View',{
 		url : '/',
-		templateUrl : 'themes/schedule/inc/index.html',
+		templateUrl : theme + 'inc/index.html',
 		controller : 'ViewTask'
-	});
+	})
+	.state('SelectTask',{
+		url: '/task:task',
+		templateUrl : theme + 'inc/task.html',
+		controller : 'SelectedTask'
+	})
 });

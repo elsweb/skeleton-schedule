@@ -2,7 +2,7 @@
 	<ion-nav-title class="title text-center">Agenda</ion-nav-title>
 	<ion-content>
 	    <ion-list>
-	       <ion-item ng-repeat="task in tasks">{{task}}</ion-item>
+	       <ion-item ng-repeat="task in tasks" href="#/task{{task}}">{{task}}</ion-item>
 	    </ion-list>
 	</ion-content>
 </ion-view>
