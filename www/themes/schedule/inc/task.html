@@ -12,7 +12,7 @@
 				<li class="item item-toggle">
 					{{item.end}}
 					<label class="toggle toggle-assertive">
-						<input type="checkbox" ng-model="end" ng-click="taskEnd(item,task)">
+						<input type="checkbox" ng-model="checked" ng-click="taskEnd(item,checked)">
 						<div class="track">
 							<div class="handle"></div>
 						</div>
@@ -20,6 +20,6 @@
 				</li>
 			</ul>
 		</div>
-		<a href="#/endtask{{task}}" class="button button-positive button-full">Salvar</a>
+		<a href="#/endtask/{{task}}" class="button button-positive button-full">Salvar</a>
 	</ion-content>
 </ion-view>

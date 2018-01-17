@@ -1,6 +1,28 @@
 <ion-view>
 	<ion-nav-title>Finalizar</ion-nav-title>
 	<ion-content>
-		
+		<div class="card">
+			<div class="item item-divider">
+				<h2>{{endtask.title}}</h2>
+			</div>
+			<div class="item item-divider">
+				<h4>Inicio: {{endtask.date_start}}</h4>
+			</div>
+			<div class="item item-divider">
+				<h4>Previsão de Término: {{endtask.date_prev}}</h4>
+			</div>
+			<div class="item item-divider">
+				<h4>Término: {{endtask.date_end |date:'dd/MM/yyyy'}}</h4>
+			</div>
+			<div class="item item-divider">
+				<div class="list">
+					<label for="" class="item item-input item-stacked-label">
+						<span class="input-label">Nota</span>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+					</label>
+				</div>
+			</div>
+		</div>
+		<a href="" class="button button-positive button-full" ng-click="finalytask();">Finalizar</a>
 	</ion-content>
 </ion-view>

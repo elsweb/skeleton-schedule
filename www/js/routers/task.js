@@ -9,12 +9,12 @@ angular.module('starter')
 		controller : 'ViewTask'
 	})
 	.state('SelectTask',{
-		url: '/task:task',
+		url: '/task/:task',
 		templateUrl : theme + 'inc/task.html',
 		controller : 'SelectedTask'
 	})
 	.state('EndTask',{
-		url:'/endtask:task',
+		url:'/endtask/:task',
 		templateUrl : theme + 'inc/endtask.html',
 		controller : 'EndTask'
 	})
