@@ -13,4 +13,9 @@ angular.module('starter')
 		templateUrl : theme + 'inc/task.html',
 		controller : 'SelectedTask'
 	})
+	.state('EndTask',{
+		url:'/endtask:task',
+		templateUrl : theme + 'inc/endtask.html',
+		controller : 'EndTask'
+	})
 });
