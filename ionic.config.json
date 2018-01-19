@@ -1,6 +1,6 @@
 {
   "name": "schedule",
-  "app_id": "",
+  "app_id": "097b1e51",
   "type": "ionic1",
   "integrations": {
     "gulp": {}

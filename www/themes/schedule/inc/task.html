@@ -1,0 +1,25 @@
+<ion-view>
+	<ion-nav-title>{{task.title}}</ion-nav-title>
+	<ion-content>
+		<div class="card">
+			<div class="item item-divider">
+			  	{{task.status}}
+			</div>
+			<div class="item-divider" style="padding:16px;">
+				{{task.desc}}
+			</div>
+			<ul class="list" ng-repeat="item in items">
+				<li class="item item-toggle">
+					{{item.end}}
+					<label class="toggle toggle-assertive">
+						<input type="checkbox" ng-model="checked" ng-click="taskEnd(item,checked)">
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				</li>
+			</ul>
+		</div>
+		<a href="#/endtask/{{task}}" class="button button-positive button-full">Salvar</a>
+	</ion-content>
+</ion-view>
