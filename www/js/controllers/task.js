@@ -1,4 +1,10 @@
-angular.module('starter').controller('ViewTask', function($scope){
+angular.module('starter').controller('ViewTask', function($scope, TaskService){	
+	
+	TaskService.getTask().then(function(dados){
+		console.log(dados);
+		//$scope.tasks = dados;
+	});
+	
 	$scope.tasks = [
 	{
 		'status': 'Pendente', 
@@ -20,6 +26,7 @@ angular.module('starter').controller('ViewTask', function($scope){
 		'desc' : 'Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.'
 	}
 	];
+	
 });
 angular.module('starter').controller('SelectedTask',function($scope, $stateParams){
 	$scope.task = angular.fromJson($stateParams.task);	
@@ -42,9 +49,31 @@ angular.module('starter').controller('SelectedTask',function($scope, $stateParam
 		}
 	}
 });
-angular.module('starter').controller('EndTask',function($scope, $stateParams, $ionicPopup, $state){
+angular.module('starter').controller('EndTask',function($scope, $stateParams, $ionicPopup, $state, TaskService){
 	$scope.endtask = angular.fromJson($stateParams.task);
+	$scope.addtask = {};
 	$scope.finalytask = function(){
+		/*
+		not suport yet
+		var ftask = {
+			params : {
+				note : $scope.addtask.note
+			}
+		};
+		TaskService.SaveTask(ftask).then(function(dados){
+			$ionicPopup.alert({
+			title : 'Tarefa Finalizada',
+			template : 'Meus Parabéns'
+			}).then(function(){
+				$state.go('View');
+			});
+		}, function(error){
+			$ionicPopup.alert({
+			title : 'Deu erro',
+			template : 'Campos Obrigatórios'
+			});
+		});
+		*/
 		$ionicPopup.alert({
 			title : 'Tarefa Finalizada',
 			template : 'Meus Parabéns'
